@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: black !important;
+}
+h1 {
+  color: white;
+}
+
+.form-class {
+  border: 1px black solid;
+  border-radius: 5px;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px !important;
+  margin: auto;
+  background-color: rgb(160, 217, 215);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(160, 217, 215, 0.3); /* Semi-transparent background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px) saturate(180%); /* Glass effect */
+  -webkit-backdrop-filter: blur(10px) saturate(180%); /* For Safari */
+}
+
+.form-class input {
+  width: 70%;
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.btn-css {
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  background-color: rgb(182, 180, 201);
+}
+
+.weather-total-div {
+  margin-bottom: 20px;
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: auto;
+  padding: 10px;
+  height: 60%;
+  background-color: rgb(242, 174, 239);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(242, 174, 239, 0.248); /* Semi-transparent background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px) saturate(180%); /* Glass effect */
+  -webkit-backdrop-filter: blur(10px) saturate(180%); /* For Safari */
+}
