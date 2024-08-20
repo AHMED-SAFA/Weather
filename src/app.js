@@ -4,8 +4,6 @@ const path = require("path");
 
 const app = express();
 const weatherdt = require("../utils/weatherData");
-const { error } = require("console");
-const { title } = require("process");
 
 const publicPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
