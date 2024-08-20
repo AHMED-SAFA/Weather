@@ -43,25 +43,43 @@ function getWeatherData(city, callback) {
 
 function show(city) {
   getWeatherData(city, (result) => {
-    console.log(result);
-    weatherTemperature.textContent =
-      (result?.main?.temp - 273.5).toFixed(2) + String.fromCharCode(176);
-
-    weatherCondition.textContent = result?.weather[0]?.main;
-
-    cityLocation.textContent = "City: " + result?.name;
-
-    searchDate.textContent = formattedDate;
-
-    humidityElement.textContent = "Humidity: " + result?.main?.humidity + "%";
-    windElement.textContent = "Wind Speed: " + result?.wind?.speed + " m/s";
-    pressureElement.textContent =
-      "Pressure: " + result?.main?.pressure + " hPa";
-    feels_like.textContent =
-      "Feels lik: " +
-      (result?.main?.feels_like - 273.5).toFixed(2) +
-      String.fromCharCode(176);
-
-    weatherMoreInfo.style.display = "block";
+    if (result.cod !== 200) {
+      cityLocation.textContent = "Invalid city name. Try again";
+      weatherCondition.textContent = "";
+      weatherTemperature.textContent = "";
+      weatherMoreInfo.style.display = "none";
+      searchDate.textContent = "";
+      return;
+    } else {
+      displayData(result);
+    }
   });
+}
+
+function displayData(result) {
+  weatherTemperature.textContent =
+    "temperature: " +
+    (result?.main?.temp - 273.5).toFixed(2) +
+    String.fromCharCode(176) +
+    "C";
+
+  weatherCondition.textContent = "Condition: " + result?.weather[0]?.main;
+
+  cityLocation.textContent = "City name: " + result?.name;
+
+  searchDate.textContent = formattedDate;
+
+  humidityElement.textContent = "Humidity: " + result?.main?.humidity + "%";
+
+  windElement.textContent = "Wind Speed: " + result?.wind?.speed + " m/s";
+
+  pressureElement.textContent = "Pressure: " + result?.main?.pressure + " hPa";
+
+  feels_like.textContent =
+    "Feels like: " +
+    (result?.main?.feels_like - 273.5).toFixed(2) +
+    String.fromCharCode(176) +
+    "C";
+
+  weatherMoreInfo.style.display = "block";
 }
