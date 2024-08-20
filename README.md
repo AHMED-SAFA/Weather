@@ -19,13 +19,17 @@
 - **Bootstrap 5**
 - **OpenWeather API**
 
+## OpenWeather API
+
+  The API is sourced from <a href = "https://openweathermap.org/api">OpenWeather</a>.
+
 <details align="center">
 <summary>
 <strong>App preview</strong>
 </summary>
 <div align="center">  
   
-  ![Screenshot (233)](https://github.com/user-attachments/assets/82d69dbb-15cc-4dce-acc5-07c11608324c)
+  ![Screenshot (233)](https://github.com/user-attachments/assets/b4b10798-9517-4188-9672-6e7c01f46d25)
   
 </div>
 </details>
